@@ -1,0 +1,46 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    background-color: mediumseagreen;
+    width: 100wh;
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+#titleContainer {
+    border: solid;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+#titleContainer > div {
+    border: white solid;
+}
+
+#mainTitle {
+    height: fit-content;
+    width: fit-content;
+    font-size: 50px;
+    margin: 10px;
+}
+
+#sideTitle {
+    font-size: 20px;
+    height: fit-content;
+}
+
+#formContainer {
+    border: solid yellow;
+    display: flex;
+}
+
+#formContainer > div,form {
+    border: gray solid;
+}
+
