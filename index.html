@@ -1,28 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
 
-        <div id="container">
-            <div id="titleContainer">
-                <div id="mainTitle">My library,</div>
-                <div id="sideTitle">a website where you can record all the books you have read or you want read in the future</div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="titleContainer">
+            <div id="mainTitle">My library,</div>
+            <div id="sideTitle">a website where you can record all the books you have read or you want read in the
+                future</div>
+            <div id="logContainer">
+                <div class="log">Total books: </div>
+                <div class="log">Read: </div>
+                <div class="log">Not read: </div>
+                <div id="deleteAll">Delete all books </div>
             </div>
-            <div id="formContainer">
-                <div>Add a Book!</div>
-                <form id="form" action="#" method="get">
-                </form>
-            </div>
-            <div id="booksContainer">booksContainer</div>
         </div>
-        
-        <script src="script.js" async defer></script>
-    </body>
+        <div id="formContainer">
+            <form id="form" action="#" method="get">
+                <div class="formElement">
+                    <label for="bookTitleInput">Title</label>
+                    <input type="text" id="bookTitleInput" placeholder="" name="title">
+                </div>
+                <div class="formElement">
+                    <label for="authorInput">Author</label>
+                    <input type="text" id="authorInput" placeholder="" name="author">
+                </div>
+                <div class="formElement">
+                    <label for="pagesInput">Pages</label>
+                    <input type="number" id="pagesInput" placeholder="" name="pages">
+                </div>
+                <div class="formElement">
+                    <label for="readInput">Read</label>
+                    <input type="checkbox" id="readInput" placeholder="" name="read" checked>
+                </div>
+                <div class="formElement">
+                    <input type="submit" id="addInput" value="Add">
+                </div>
+
+            </form>
+        </div>
+        <div id="filterContainer">order by
+            <div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div id="booksContainer">
+            <div id="littleBooksContainer">
+                <div id=""></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" async defer></script>
+</body>
+
 </html>
