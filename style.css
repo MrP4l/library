@@ -30,6 +30,31 @@
     margin: 10px;
 }
 
+#logContainer {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.log {
+   /*STYLE BUTTONS*/
+}
+
+#deleteAll {
+    margin-left: 30px;
+    background-color: red; /*TO MODIFY*/
+    border-radius: 5px;
+}
+
+#deleteAll:hover {
+    background-color: rgb(205, 3, 3); /*TO MODIFY*/
+}
+
+#logContainer > div {
+    border: solid blue;
+}
+
 #formContainer {
     border: solid yellow;
     display: flex;
@@ -39,8 +64,6 @@
 }
 
 #formContainer > div,form {
-    border: gray solid;
-    margin: 0.5vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +72,8 @@
 
 #form {
     display: flex;
-    width: 100vw;
+    flex-wrap: wrap;
+    border: solid;
 }
 
 .formElement {
@@ -101,31 +125,6 @@ input {
  /*TO MODIFY*/
 }
 
-#logContainer {
-    display: flex;
-    gap: 20px;
-    font-size: 20px;
-    justify-content: center;
-}
-
-.log {
-   /*STYLE BUTTONS*/
-}
-
-#deleteAll {
-    margin-left: 30px;
-    background-color: red; /*TO MODIFY*/
-    border-radius: 5px;
-}
-
-#deleteAll:hover {
-    background-color: rgb(205, 3, 3); /*TO MODIFY*/
-}
-
-#logContainer > div {
-    border: solid blue;
-}
-
 #booksContainer {
     border: purple solid;
     height: 100%;
@@ -135,6 +134,28 @@ input {
 
 #tableContainer {
     border: green solid;
+    display: flex;
+    flex-wrap: wrap;
     width: 70%;
     height: 100%;
+}
+
+#tableContainer > div {
+    border: solid;
+    width: 100%;
+}
+
+#indexContainer {
+    display: flex;
+}
+
+#indexContainer > div {
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#contentContainer {
+    height: 95%;
 }
