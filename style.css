@@ -4,6 +4,10 @@
     font-family: 'Quicksand', 'Roboto', sans-serif;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 #container {
     background-color: mediumseagreen;
     width: 100vw;
@@ -157,5 +161,23 @@ input {
 }
 
 #contentContainer {
-    height: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    background-color: aliceblue;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+#contentContainer > div {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    border: solid;
+}
+
+#contentContainer > div > div {
+    height: 50px;
+    width: 25%;
+    border: solid green;
 }
