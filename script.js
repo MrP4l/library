@@ -97,40 +97,30 @@ function howManyBooksRead() {
 function howManyBooksNotRead() {
  
 }
- 
+
 function addBookToLibrary() {
     //To optimize
     clearTheDisplay();
     myLibrary.forEach((element) => {
-    //    console.log(element.title);
-    //    console.log(element.author);
-    //    console.log(element.pages);
-    //    console.log(element.read);
+        console.log(myLibrary);
     //    values = [];
-       
-    //    values.push(element.title, element.author, element.pages, element.read);
-    //    console.log(values)
+        values.push(element.title, element.author, element.pages, element.read);
    
-        console.log(element.title, element.author, element.pages, element.read);
+        // console.log(element.title, element.author, element.pages, element.read);
  
         const parentItem = document.createElement("div");
         parentItem.classList.add("parentItem");
         contentContainer.appendChild(parentItem);
-       
-        for (let i = 0; i < 4; i++){
+        let valuesLenght = values.length;
+        console.log(valuesLenght);
+        // maybe split the function above and under this line
+        for (let i = 0; i < valuesLenght; i++){
+
             const div = document.createElement("div");
             div.classList.add("item");
             parentItem.appendChild(div);
         }
-    //    let firstElement = document.querySelector('.parentItem :nth-child(1)');
-    //    let secondElement = document.querySelector('.parentItem :nth-child(2)');
-    //    let thirdElement = document.querySelector('.parentItem :nth-child(3)');
-    //    let fourthElement = document.querySelector('.parentItem :nth-child(4)');
- 
-    //    firstElement.innerText = element.title;
-    //    secondElement.innerText = element.author;
-    //    thirdElement.innerText = element.pages;
-    //    fourthElement.innerText = element.read;
+
         let divs = document.querySelectorAll(".item").length;
  
     });          
