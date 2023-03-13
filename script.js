@@ -8,6 +8,7 @@ let totalBooks = document.getElementById("totalBooks");
 let booksRead = document.getElementById("booksRead");
 let myLibrary = [];
 let values = [];
+let temporaryValues = [];
  
 function preventSubmit() {
     addBook.addEventListener("click", preventSubmitting);
@@ -99,31 +100,26 @@ function howManyBooksNotRead() {
 }
 
 function addBookToLibrary() {
-    //To optimize
-    clearTheDisplay();
+    values = [];
+    let lastFourValues = [];
     myLibrary.forEach((element) => {
-        console.log(myLibrary);
-    //    values = [];
+        lastFourValues = [];
         values.push(element.title, element.author, element.pages, element.read);
-   
-        // console.log(element.title, element.author, element.pages, element.read);
- 
-        const parentItem = document.createElement("div");
-        parentItem.classList.add("parentItem");
-        contentContainer.appendChild(parentItem);
-        let valuesLenght = values.length;
-        console.log(valuesLenght);
-        // maybe split the function above and under this line
-        for (let i = 0; i < valuesLenght; i++){
+        lastFourValues.push(element.title, element.author, element.pages, element.read);
+    })        
+    console.log(myLibrary, "Oggetti");
+    console.log(values, "valori array");
+    console.log(lastFourValues, "ultimi 4 val")
+    
+    const parentItem = document.createElement("div");
+    parentItem.classList.add("parentItem");
+    contentContainer.appendChild(parentItem);
 
-            const div = document.createElement("div");
-            div.classList.add("item");
-            parentItem.appendChild(div);
-        }
-
-        let divs = document.querySelectorAll(".item").length;
- 
-    });          
+    for (let i = 0; i < 4; i++){
+        const div = document.createElement("div");
+        div.classList.add("item");
+        parentItem.appendChild(div);
+    }
 };
  
 function clearTheDisplay() {
