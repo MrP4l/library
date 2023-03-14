@@ -158,6 +158,8 @@ input {
     text-align: center;
     font-weight: 600;
     font-size: 20px;
+    border: solid yellow;
+    /*Change the size of the divs*/
 }
 
 #contentContainer {
@@ -171,13 +173,13 @@ input {
 
 #contentContainer > div {
     display: flex;
-    height: 50px;
+    height: 40px;
     width: 100%;
     border: solid;
 }
 
 #contentContainer > div > div {
-    height: 50px;
+    height: 40px;
     width: 25%;
     border: solid green;
 }

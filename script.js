@@ -6,9 +6,9 @@ let read = document.getElementById("readInput");
 let deleteAll = document.getElementById("deleteAll");
 let totalBooks = document.getElementById("totalBooks");
 let booksRead = document.getElementById("booksRead");
+let booksNotRead = document.getElementById("booksNotRead");
 let myLibrary = [];
-let values = [];
-let temporaryValues = [];
+
  
 function preventSubmit() {
     addBook.addEventListener("click", preventSubmitting);
@@ -16,7 +16,7 @@ function preventSubmit() {
       event.preventDefault();
     }
 }
- 
+
 preventSubmit()
  
 class Book {
@@ -30,75 +30,79 @@ class Book {
  
 function isChecked(){
     if (read.checked){
-        read.value = "X"
-    } else
+        read.value = "Yes"
+    } 
+    else
     {
-        read.value = ""
+        read.value = "Nope"
     }
 }
  
 function addBookToArray() {
     addBook.addEventListener("click", () => {
-        isChecked()
-        var newBook = new Book(title.value, author.value, pages.value, read.value);
-        myLibrary.push(newBook);
-    //    console.log(myLibrary);
+        if (title.value != "" || author.value != ""){
+            isChecked()
+            var newBook = new Book(title.value, author.value, pages.value, read.value);
+            myLibrary.push(newBook);
+            clearTheFields();
+            numbersOfBooks();
+        }
     });
 }
  
 function clearTheFields() {
-    addBook.addEventListener("click", () => {
-        title.value = "";
-        author.value = "";
-        pages.value = "";
-        read.checked = false;
-        addBookToLibrary();
-    })
+    title.value = "";
+    author.value = "";
+    pages.value = "";
+    read.checked = true;
+    addBookToLibrary();
 }
  
 function deleteAllBooks() {
     deleteAll.addEventListener("click", () => {
-        myLibrary.length = 0;
-        console.log(myLibrary);
+        myLibrary = [];
+        clearTheDisplay()
+        numbersOfBooks()
     });
 }
  
 function numbersOfBooks() {
-    addBook.addEventListener("click", () => {
-        booksAdded();
-        howManyBooksRead();
-        howManyBooksNotRead();
-    })
+    booksAdded();
+    howManyBooksRead();
+    howManyBooksNotRead();
 }
  
 function booksAdded() {
-//      isChecked();
-        let howManyBooks = myLibrary.length;
-        totalBooks.innerHTML = `Total Books: ${howManyBooks}`;
+//     isChecked();
+    let howManyBooks = myLibrary.length;
+    totalBooks.innerHTML = `Total Books: ${howManyBooks}`;
 }
- 
 function howManyBooksRead() {
-    // To Adjust
-/*    
-        let howMany = 0;
-        myLibrary.forEach((element) =>
-        {
-            if (element.read == "X"){
-                howMany =+ howMany + 1
-            }else
-            {
-                howMany =+ howMany + 0
-            }
+    let howMany = 0;
+
+    myLibrary.forEach((element) =>
+    {
+        if (element.read == "Yes"){
+            howMany =+ howMany + 1
         }
-        )
-        booksRead.innerHTML = `Read: ${howMany}`;
-        */
+    }
+    )
+    booksRead.innerHTML = `Read: ${howMany}`;
 }
  
 function howManyBooksNotRead() {
- 
+    let howMany = 0;
+    myLibrary.forEach((element) =>
+    {
+        if (element.read == "Nope"){
+            howMany =+ howMany + 1
+        }
+    }
+    )
+    booksNotRead.innerHTML = `Not read: ${howMany}`;
 }
 
+let values = [];
 function addBookToLibrary() {
     values = [];
     let lastFourValues = [];
@@ -107,18 +111,19 @@ function addBookToLibrary() {
         values.push(element.title, element.author, element.pages, element.read);
         lastFourValues.push(element.title, element.author, element.pages, element.read);
     })        
-    console.log(myLibrary, "Oggetti");
-    console.log(values, "valori array");
-    console.log(lastFourValues, "ultimi 4 val")
+    //console.log(myLibrary, "Oggetti");
+    //console.log(values, "valori array");
+    //console.log(lastFourValues, "ultimi 4 val")
     
     const parentItem = document.createElement("div");
     parentItem.classList.add("parentItem");
     contentContainer.appendChild(parentItem);
 
-    for (let i = 0; i < 4; i++){
+    for (const val of lastFourValues){
         const div = document.createElement("div");
         div.classList.add("item");
         parentItem.appendChild(div);
+        div.innerHTML = val;
     }
 };
  
@@ -127,6 +132,4 @@ function clearTheDisplay() {
 }
  
 addBookToArray();
-clearTheFields();
 deleteAllBooks();
-numbersOfBooks();
