@@ -73,7 +73,6 @@ function numbersOfBooks() {
 }
  
 function booksAdded() {
-//     isChecked();
     let howManyBooks = myLibrary.length;
     totalBooks.innerHTML = `Total Books: ${howManyBooks}`;
 }

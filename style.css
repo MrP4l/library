@@ -86,7 +86,6 @@
     justify-content: center;
     align-items: center;
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-    
 }
 
 label {
@@ -157,11 +156,13 @@ input {
 }
 
 #indexContainer > div {
+    /*Modify the font-size with min-max!*/
     text-align: center;
     font-weight: 600;
     font-size: 20px;
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
     margin: 5px;
+    overflow: scroll;
 }
 
 #indexContainer > div:nth-child(1) {
