@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Quicksand', 'Roboto', sans-serif;
+    font-family: "Norse Bold";
 }
 
 ::-webkit-scrollbar {
@@ -9,7 +10,7 @@
 }
 
 #container {
-    background-color: mediumseagreen;
+    background-color: #64748b;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -17,14 +18,14 @@
 }
 
 #headerContainer {
-    border: solid;
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    border-bottom: 1px solid;
 }
 
 #headerContainer > div {
-    border: white solid;
 }
 
 #mainTitle {
@@ -42,25 +43,24 @@
 }
 
 .log {
-   /*STYLE BUTTONS*/
+    margin: 5px;
 }
 
 #deleteAll {
     margin-left: 30px;
-    background-color: red; /*TO MODIFY*/
     border-radius: 5px;
+    margin: 5px;
 }
 
 #deleteAll:hover {
-    background-color: rgb(205, 3, 3); /*TO MODIFY*/
+    background-color: #5d6b7e; /*TO MODIFY*/
 }
 
 #logContainer > div {
-    border: solid blue;
+    border-radius: 5px;
 }
 
 #formContainer {
-    border: solid yellow;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -77,27 +77,28 @@
 #form {
     display: flex;
     flex-wrap: wrap;
-    border: solid;
 }
 
 .formElement {
-    margin: 1vw;
-    border: solid;
+    margin: 0.5vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    
 }
 
 label {
     margin-right: 20px;
+    margin: 10px
 }
 
 input {
     width: 25vw;
     height: 2.5vh;
     border: 1px solid;
-    border-radius: 5px;
+    border-radius: 7px;
     padding: 2px 10px;
     font-size: 1.6vh;
     font-family: "Lucida Console", "Courier New", monospace;
@@ -130,56 +131,93 @@ input {
 }
 
 #booksContainer {
-    border: purple solid;
     height: 100%;
     display: flex;
     justify-content: center;
+    overflow: scroll;
 }
 
 #tableContainer {
-    border: green solid;
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
-    height: 100%;
+    width: 80%;
+    height: 100vh;
+    overflow: scroll;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 #tableContainer > div {
-    border: solid;
     width: 100%;
+    overflow: scroll;
 }
 
 #indexContainer {
     display: flex;
+    border: 1px solid;
 }
 
 #indexContainer > div {
-    flex: 1;
     text-align: center;
     font-weight: 600;
     font-size: 20px;
-    border: solid yellow;
-    /*Change the size of the divs*/
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    margin: 5px;
+}
+
+#indexContainer > div:nth-child(1) {
+    width: 40%;
+}
+
+#indexContainer > div:nth-child(2) {
+    width: 40%;
+}
+
+#indexContainer > div:nth-child(3) {
+    width: 10%;
+}
+
+#indexContainer > div:nth-child(4) {
+    width: 10%;
 }
 
 #contentContainer {
     display: flex;
-    flex-wrap: wrap;
     height: 100%;
+    width: 100vw;
     background-color: aliceblue;
     flex-direction: column;
     overflow: scroll;
+    border: 1px solid;
 }
 
 #contentContainer > div {
     display: flex;
     height: 40px;
     width: 100%;
-    border: solid;
+    border-top: 1px solid;
+    margin-bottom: 10px;
 }
 
 #contentContainer > div > div {
     height: 40px;
-    width: 25%;
-    border: solid green;
+    overflow: scroll;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+#contentContainer > div > div:nth-child(1) {
+    width: 40%;
+}
+
+#contentContainer > div > div:nth-child(2) {
+    width: 40%;
+}
+
+#contentContainer > div > div:nth-child(3) {
+    width: 10%;
+    text-align: center;
+}
+
+#contentContainer > div > div:nth-child(4) {
+    width: 10%;
+    text-align: center;
 }

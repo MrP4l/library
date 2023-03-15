@@ -77,6 +77,7 @@ function booksAdded() {
     let howManyBooks = myLibrary.length;
     totalBooks.innerHTML = `Total Books: ${howManyBooks}`;
 }
+
 function howManyBooksRead() {
     let howMany = 0;
 
@@ -111,9 +112,6 @@ function addBookToLibrary() {
         values.push(element.title, element.author, element.pages, element.read);
         lastFourValues.push(element.title, element.author, element.pages, element.read);
     })        
-    //console.log(myLibrary, "Oggetti");
-    //console.log(values, "valori array");
-    //console.log(lastFourValues, "ultimi 4 val")
     
     const parentItem = document.createElement("div");
     parentItem.classList.add("parentItem");
@@ -130,6 +128,6 @@ function addBookToLibrary() {
 function clearTheDisplay() {
     document.querySelectorAll('.parentItem').forEach(e => e.remove());
 }
- 
+
 addBookToArray();
 deleteAllBooks();
