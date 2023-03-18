@@ -4,7 +4,7 @@ This is a simple "online library" where you can log book you had read or which o
 
 ----
 TODO:
-- Rewrite all the code using OOP, the code is too much messed up
+- Rewrite all the code, it's too much messed up
 - Optimize it for mobile devices
 ----
 Inspired by The Odin Project - https://www.theodinproject.com/lessons/node-path-javascript-library
