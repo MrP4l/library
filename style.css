@@ -1,8 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Quicksand', 'Roboto', sans-serif;
-    font-family: "Norse Bold";
+    font-family: monospace, Arial, Helvetica, sans-serif;
 }
 
 ::-webkit-scrollbar {
