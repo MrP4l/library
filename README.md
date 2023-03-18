@@ -4,7 +4,7 @@ This is a simple "online library" where you can log book you had read or which o
 
 ----
 TODO:
-- Add the possibility to remove a single log
-- Add a button on each book’s row to change its read status
+- Rewrite all the code using OOP, the code is too much messed up
+- Optimize it for mobile devices
 ----
 Inspired by The Odin Project - https://www.theodinproject.com/lessons/node-path-javascript-library
