@@ -8,14 +8,12 @@ let totalBooks = document.getElementById("totalBooks");
 let booksRead = document.getElementById("booksRead");
 let booksNotRead = document.getElementById("booksNotRead");
 
-function preventSubmit() {
+(function preventSubmit() {
   addBook.addEventListener("click", preventSubmitting);
   function preventSubmitting(event) {
     event.preventDefault();
   }
-}
-
-preventSubmit();
+})();
 
 class Book {
   constructor(title, author, pages, read) {
@@ -147,7 +145,7 @@ function howManyBooksRead() {
 
   myLibrary.forEach((element) => {
     if (element.read == "Yes") {
-      howMany = +howMany + 1;
+      howMany += 1;
     }
   });
   booksRead.innerHTML = `Read: ${howMany}`;
@@ -157,7 +155,7 @@ function howManyBooksNotRead() {
   let howMany = 0;
   myLibrary.forEach((element) => {
     if (element.read == "Nope") {
-      howMany = +howMany + 1;
+      howMany += 1;
     }
   });
   booksNotRead.innerHTML = `Not read: ${howMany}`;

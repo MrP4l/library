@@ -155,11 +155,11 @@ input {
 }
 
 #indexContainer > div {
-    /*Modify the font-size with min-max!*/
     text-align: center;
     font-size: 20px;
     margin: 3px;
     overflow: scroll;
+    font-size: clamp(0.7rem, 1vw, 1.3vw);
 }
 
 #indexContainer > div:nth-child(1) {
@@ -198,6 +198,7 @@ input {
     width: 100%;
     border-top: 1px solid;
     margin-bottom: 10px;
+    font-size: clamp(0.7rem, 1vw, 2rem);
 }
 
 #contentContainer > div > div {
@@ -208,11 +209,11 @@ input {
 }
 
 #contentContainer > div > div:nth-child(1) {
-    width: 40%;
+    width: 45%;
 }
 
 #contentContainer > div > div:nth-child(2) {
-    width: 40%;
+    width: 35%;
 }
 
 #contentContainer > div > div:nth-child(3) {
